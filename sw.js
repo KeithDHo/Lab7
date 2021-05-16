@@ -8,7 +8,7 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = ['https://cse110lab6.herokuapp.com/entries'];
 
-// event listener at install
+// event listener for install
 self.addEventListener('install', function (event) {
     // Perform install steps
     event.waitUntil(
@@ -19,6 +19,7 @@ self.addEventListener('install', function (event) {
     );
 });
 
+// event listener for activation
 self.addEventListener('activate', event => {
     event.waitUntil(clients.claim());
 });
